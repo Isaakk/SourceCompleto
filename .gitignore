@@ -10,3 +10,5 @@ lua/
 mysql/
 pugixml/
 vcpkg/
+
+realmap.otbm

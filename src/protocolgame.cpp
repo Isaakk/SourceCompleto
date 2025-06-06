@@ -2393,15 +2393,16 @@ void ProtocolGame::sendOutfitWindow()
 		}
 	}
 
-	//msg.addByte(protocolOutfits.size()); << antigo
-	msg.add<uint16_t>(protocolOutfits.size());
+	msg.addByte(protocolOutfits.size());
+	//msg.add<uint16_t>(protocolOutfits.size());
 	for (const ProtocolOutfit& outfit : protocolOutfits) {
 		msg.add<uint16_t>(outfit.lookType);
 		msg.addString(outfit.name);
 		msg.addByte(outfit.addons);
 	}
 
-	writeToOutputBuffer(msg, false);
+	//writeToOutputBuffer(msg, false);
+	writeToOutputBuffer(msg);
 }
 
 void ProtocolGame::sendUpdatedVIPStatus(uint32_t guid, bool online)

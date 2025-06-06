@@ -23,7 +23,9 @@ local function onMovementRemoveProtection(cid, oldPosition, time)
     addEvent(onMovementRemoveProtection, 1000, cid, oldPosition, time - 1)
 end
 
+local storage_bailar = 45456
 function onLogin(player)
+	player:setStorageValue(storage_bailar, 0)
 	if(player:getStorageValue(STORAGE_PLAYER_IN_ARENA) == 1) then
 		player:teleportTo(player:getTown():getTemplePosition())
 		player:setStorageValue(STORAGE_PLAYER_IN_ARENA, 0)

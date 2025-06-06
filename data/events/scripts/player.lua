@@ -598,8 +598,8 @@ function Player:onReportBug(message, position, category)
 	return true
 end
 
-local storage1 = 45456
-local delay1 = 1 -- seconds
+local storage_bailar = 45456
+local delay_bailar = 075 -- decimales 100 = 0.1 segundo
 
 function Player:onTurn(direction)
     if self:getGroup():getAccess() and self:getDirection() == direction then
@@ -610,10 +610,12 @@ function Player:onTurn(direction)
     end
     
     if not self:getGroup():getAccess() then
-        if self:getStorageValue(storage1) >= os.time() then
+        if self:getStorageValue(storage_bailar)/1000 >= os.clock() then
             return false
         else
-            self:setStorageValue(storage1, os.time() + delay1)
+			local tiempo = os.clock()*1000+delay_bailar
+			--self:sendTextMessage(MESSAGE_EVENT_DEFAULT, "Hola: " .. tiempo)
+            self:setStorageValue(storage_bailar, tiempo)
         end
     end
     return true

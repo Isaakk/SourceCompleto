@@ -20,12 +20,12 @@
 #ifndef FS_DEFINITIONS_H_877452FEC245450C9F96B8FD268D8963
 #define FS_DEFINITIONS_H_877452FEC245450C9F96B8FD268D8963
 
-static constexpr auto STATUS_SERVER_NAME = "AR The Server";
+static constexpr auto STATUS_SERVER_NAME = "Medivial";
 static constexpr auto STATUS_SERVER_VERSION = "1";
-static constexpr auto MINOR_VERSION = "0";
+static constexpr auto MINOR_VERSION = "1";
 static constexpr auto REVISION_VERSION = "DEV";
-static constexpr auto SOFTWARE_CODENAME = "";
-static constexpr auto STATUS_SERVER_DEVELOPERS = "Matt, Leandro Brewster, Erick Nunes, AR The server Contributors and The Forgotten Server Developers";
+static constexpr auto SOFTWARE_CODENAME = "Peregrinaje";
+static constexpr auto STATUS_SERVER_DEVELOPERS = "Isaakk, Jodedor, Matt, Leandro Brewster, Erick Nunes, AR The server Contributors and The Forgotten Server Developers";
 static constexpr auto GIT_REPO = "";
 
 static constexpr auto CLIENT_VERSION_MIN = 860;

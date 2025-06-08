@@ -613,7 +613,7 @@ function Player:onTurn(direction)
         if self:getStorageValue(storage_bailar)/1000 >= os.clock() then
             return false
         else
-			local tiempo = os.clock()*1000+delay_bailar
+			local tiempo = (os.clock()*1000)+delay_bailar
 			--self:sendTextMessage(MESSAGE_EVENT_DEFAULT, "Hola: " .. tiempo)
             self:setStorageValue(storage_bailar, tiempo)
         end
